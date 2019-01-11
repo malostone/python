@@ -26,6 +26,8 @@ print(my_round(random.uniform(1.0876521, 23.6655665), 5))
 
 def lucky_ticket(ticket_number):
     a = str(ticket_number)
+    if len(a) != 6:
+        return "слишком короткий номер" 
     sum1 = int(a[0]) + int(a[1]) + int(a[2])
     sum2 = int(a[3]) + int(a[4]) + int(a[5])
     if sum1 == sum2:
@@ -37,4 +39,4 @@ def lucky_ticket(ticket_number):
 print(lucky_ticket(123006))
 print(lucky_ticket(12321))
 print(lucky_ticket(436751))
-print(lucky_ticket(random.uniform(111111, 999999)))
+print(lucky_ticket(int(random.uniform(111111, 999999))))
