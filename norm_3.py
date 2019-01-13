@@ -35,3 +35,20 @@ def sort_to_max(list):
 
 print(sort_to_max([-1, 0 , 2, 57, 45, 19, 9, -7, 32, 43]))
 print(sort_to_max([2, 10, -12, 2.5, 20, -11, 4, 4, 0]))
+
+# Задача-3:
+# Напишите собственную реализацию стандартной функции filter.
+# Разумеется, внутри нельзя использовать саму функцию filter.
+
+def find_x(string):  
+    return 'x' in string.lower()
+
+list = ['extreme', 'vector', 'x-ray', 'helicopter', 'x-mas']
+
+def my_filter(find_x, list):
+    for i in list:
+        if find_x(i) == False:
+            list.remove(i)
+    return list
+
+print(my_filter(find_x, list))
